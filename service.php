@@ -2,7 +2,6 @@
 session_start();
 include("./db/conection.php");
 
-// Fetch doctors from profiles table where role = 'Doctor'
 $doctors_sql = "SELECT * FROM profiles WHERE role = 'Doctor' AND (status = 'approved' OR status = 'created') ORDER BY specialization, name";
 $doctors_result = mysqli_query($conn, $doctors_sql);
 $doctors = [];
@@ -85,8 +84,7 @@ if ($doctors_result && mysqli_num_rows($doctors_result) > 0) {
     </head>
 
     <body>
-        <!-- Top Header Start -->
-        <section class="banner-header">
+Remo        <section class="banner-header">
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
